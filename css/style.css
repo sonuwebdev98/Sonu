@@ -1,0 +1,932 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background-color: #2c3e50;
+  color: #eeeeee;
+}
+
+html {
+  font-size: 19px;
+  scroll-behavior: smooth;
+  
+}
+
+a:visited{
+  color: #eeeeee;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fixed-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mr-btm {
+  margin-bottom: 20px;
+}
+
+/*----------------- header starts here -----------*/
+
+header {
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 50px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: #2c3e50;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+header nav {
+  line-height: 50px;
+  position: relative;
+}
+
+header nav .logo {
+  width: 20%;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #eeeeee;
+  transition: all 0.3s ease-in;
+  /* background-color: #ffc107; */
+}
+header nav .logo:hover {
+  color: #00b87b;
+}
+
+header nav .logo span {
+  color: #00b87b;
+}
+
+header nav ul {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+header nav ul li {
+  margin-left: 5%;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #eeeeee;
+  transition: all 0.3s ease;
+}
+
+header nav ul li .active {
+  color: #00b87b;
+}
+
+header nav ul li a:hover {
+  color: #00b87b;
+}
+
+header nav .nav-icon{
+  display: none;
+} 
+
+.nav-icon  .menu {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  margin-top: 5px;
+ 
+}
+
+.line {
+  fill: none;
+  stroke: #eeeeee;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+ul {
+  transition: all 0.3s ease;
+  
+}
+
+.active {
+  left: -76px;
+}
+
+/*----------------- header ends here -----------*/
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+/*------ left box stars here -------*/
+
+.container .leftfixed {
+  position: fixed;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  text-align: center;
+  max-width: 300px;
+  padding-bottom: 1.2rem;
+}
+
+.container .leftfixed .img-areas {
+  width: 100%;
+}
+
+.container .leftfixed .img-areas figure {
+  height: 100%;
+}
+
+/* .container .leftfixed .img-areas figure img {
+  width: 80%;
+  border-radius: 50%;
+  margin-top: 50px;
+  border: 5px solid #00b87b;
+} */
+
+.container .leftfixed .social-icon {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.container .leftfixed .social-icon figcaption {
+  color: #00b87b;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .leftfixed .social-icon {
+  padding-top: 0px;
+}
+
+.container .leftfixed .social-icon h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-bottom: 4rem;
+}
+
+.container .leftfixed .social-icon span {
+  background-color: #314355;
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  transition: all 0.3s ease;
+}
+
+.container .leftfixed .social-icon span:hover {
+  background-color: #2c3e50;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  cursor: pointer;
+}
+.container .leftfixed .buttons {
+  width: 100%;
+}
+
+.container .leftfixed .buttons .btn {
+  color: #eeeeee;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 15px 30px 15px 30px;
+  /* border: 1px solid darkgray; */
+  text-decoration: none;
+  background: transparent;
+  width: 49%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .leftfixed .buttons .btn:hover {
+  background-color: #314355;
+  cursor: pointer;
+}
+
+/*------ left box ends here -------*/
+
+/*------ Right box stars here -------*/
+
+.container .right {
+  width: 80%;
+  margin-left: 30%;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  padding: 10px;
+  position: relative;
+  /* z-index: -100; */
+}
+
+/* ------------------------- about section starts here ------------------------  */
+
+.container .right .About {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headings {
+  width: 100%;
+}
+
+.headings h1 {
+  font-size: 2rem;
+  line-height: 48px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.container .right .About .summary {
+  width: 100%;
+  margin: 2rem 0 0rem 0;
+}
+
+.container .right .About .summary h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+}
+
+.container .right .About .summary h1{
+
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.container .right .About .summary h1 .names{
+  color: #00b87b;
+}
+
+.container .right .About .summary p {
+  font-size: 1rem;
+  line-height: 35px;
+  margin: 25px 0;
+  
+
+}
+
+.container .right .About .summary p .pro{
+  color: #00b87b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container .right .About .summary p  span{
+  color: #00b87b;
+  font-size: 1rem;
+  font-weight: bold ;
+}
+
+.container .right .About .personal-details {
+  width: 100%;
+}
+
+.container .right .About .personal-details .details {
+  width: 50%;
+}
+
+.container .right .About .personal-details .details h1 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 1rem;
+}
+
+.container .right .About .personal-details .details span {
+  color: #00b87b;
+}
+
+/* ------------------------- about section ends here ------------------------ */
+
+/* ------------------------- skills section starts here ------------------------ */
+.container .right .Skills {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .right .Skills .personal-skills {
+  width: 100%;
+}
+
+.container .right .Skills .personal-skills .skill {
+  width: 50%;
+  margin-top: 2.5rem;
+}
+
+.Skills .personal-skills .skill .pro {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Skills .personal-skills .skill .pro h1 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.Skills .personal-skills .skill .pro .progress-html {
+  width: 95%;
+  border: 4px solid #00b87b;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-css {
+  width: 95%;
+  border: 4px solid #dc3545;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-bootstrap {
+  width: 95%;
+  border: 4px solid #7952b3;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-js {
+  width: 95%;
+  border: 4px solid  #ffc107 ;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-jq {
+  width: 95%;
+  border: 4px solid #198754;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-scss {
+  width: 95%;
+  border: 4px solid #0dcaf0;
+  margin-top: 10px;
+}
+
+/* ------------------------- skills section ends here ------------------------ */
+
+/* ------------------------- Experience section starts here ------------------------ */
+.container .right .Experience {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .right .Experience .knowledge {
+  width: 100%;
+  padding: 50px 0;
+}
+
+
+.container .right .Experience .knowledge .ex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
+
+.container .right .Experience .knowledge .ex span{
+  width: 1%;
+  color: #00b87b;
+  font-size: 15px;
+  margin-top: 12px;
+  font-weight: bold;
+
+}
+
+.container .right .Experience .knowledge .ex p {
+  font-size: 0.9rem;
+  line-height: 40px;
+  text-align-last: auto;
+  width: 99%;
+  padding-left: 10px;
+
+
+
+}
+
+/* ------------------------- Experience section ends here ------------------------ */
+
+/* ------------------------- Services section starts here ------------------------ */
+
+.container .right .Services {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right .Services .service {
+  width: 100%;
+}
+
+.right .Services .service .web {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.right .Services .service .web .lap-icon {
+  background-color: #eeeeee;
+  color: #00b87b;
+  padding: 10px;
+  font-size: 2.5rem;
+  transition: all .4s ease;
+}
+
+.right .Services .service .web .lap-icon:hover {
+  background-color: #00b87b;
+  color: #eeeeee;
+  cursor: pointer;
+
+}
+
+.right .Services .service .web h1 {
+  color: #00b87b;
+}
+
+.right .Services .service .ser {
+  width: 32%;
+  background-color: #314355;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  margin-top: 25px;
+}
+
+.right .Services .service .ser h1 {
+  text-align: center;
+  font-size: 1rem;
+  margin: 25px 0;
+  /* color: #00b87b; */
+}
+
+.right .Services .service .ser p {
+  font-size: 0.8rem;
+  line-height: 28px;
+  padding: 0 10px;
+  color: #ffff;
+  margin-top: 18px;
+}
+
+/* ------------------------- Services section ends here ------------------------ */
+
+/* ------------------------- Portfolio section Starts here ------------------------ */
+
+.container .right .Portfolio {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right .Portfolio .projects {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.right .Portfolio .projects .web {
+  width: 47.5%;
+  margin-bottom: 50px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.right .Portfolio .projects .web img {
+  width: 100%;
+  height: 30vh;
+}
+.right .Portfolio .projects .web figcaption a {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #eeeeee;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.right .Portfolio .projects .web figcaption a:hover {
+  color: #fff;
+}
+
+/* ------------------------- Portfolio section ends here ------------------------ */
+
+/* ------------------------- Contacts  section Starst  here ------------------------ */
+
+.container .right .Contact {
+  width: 100%;
+  padding-top: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right .Contact form {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.right .Contact form .name_email {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.right .Contact form .name_email .name input:visited {
+  color: #eeeeee;
+}
+
+.right .Contact form .name_email .name,
+.right .Contact form .name_email .email {
+  width: 49.5%;
+}
+
+.right .Contact form .name_email .name input,
+.right .Contact form .name_email .email input {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #314355;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  padding-left: 0.8rem;
+  font-size: 1rem;
+}
+
+.right .Contact form .name_email .name input::placeholder,
+.right .Contact form .name_email .email input::placeholder {
+  color: #eeeeee;
+  font-size: 0.9rem;
+  padding-left: -0.8rem;
+}
+
+.right .Contact form .name_email .name input:focus,
+.right .Contact form .name_email .email input:focus {
+  outline: 4px solid #198754;
+  color: #eeeeee;
+}
+
+.right .Contact form .massage {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.right .Contact form .massage textarea {
+  width: 100%;
+  background-color: #314355;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  font-size: 1rem;
+}
+
+.right .Contact form .massage textarea::placeholder {
+  font-size: 0.9rem;
+  color: #eeeeee;
+}
+
+.right .Contact form .massage textarea:focus {
+  outline: 4px solid #198754;
+}
+
+.right .Contact form .btn-section {
+  width: 100%;
+}
+
+.right .Contact form .btn-section button {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 0.9rem;
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  background-color: #00b87b;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  transition: all 0.3s ease;
+}
+
+.right .Contact form .btn-section button:hover {
+  background-color: #198754;
+  color: #fff;
+  cursor: pointer;
+}
+
+.right .Contact form .btn-section button:focus {
+  outline: 4px solid #198754;
+}
+
+/* ------------------------- Contacts section ends here ------------------------ */
+
+/*---------------------- footer starts here ----------------*/
+
+.right footer {
+  width: 100%;
+  background-color: #314355;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.right footer span {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  transition: all 0.3s ease;
+}
+
+.right footer span:hover {
+  background-color: #314355;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+
+  cursor: pointer;
+}
+
+/*---------------------- footer ends here ----------------*/
+
+/*------ right box ends here -------*/
+
+/*---------------------- Media quaries starts here ---------------*/
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;  
+  }
+
+  header nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container .leftfixed {
+    width: 80%;
+    margin: 0 auto;
+    max-width: none;
+    margin-bottom: 50px;
+    position: unset;
+    padding-bottom: 1rem;
+    background-color: #2c3e50;
+    padding: 10px;
+  }
+
+  .container .leftfixed .img-areas {
+    width: 48.5%;
+    /* background-color: red; */
+  }
+
+  .container .leftfixed .img-areas img {
+    object-fit: cover;
+    width: 70%;
+    border: 5px solid #00b87b;
+    /* height: 90%; */
+    margin: 1rem 0;
+    border-radius: 50%;
+  }
+
+  .container .leftfixed .social-icon {
+    width: 48.5%;
+    margin-top: 0px;
+    /* background-color: grey; */
+  }
+
+  .container .leftfixed .social-icon figcaption {
+    margin-top: 2.5rem;
+  }
+
+  .container .leftfixed .social-icon h1 {
+    padding-bottom: 0px;
+  }
+
+  .container .leftfixed .buttons .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .container .right {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .right .Services .service .ser p {
+    font-size: 0.9rem;
+    padding: 10px;
+
+}
+
+@media only screen and (max-width:992px) {
+  .container .leftfixed .img-areas {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container .leftfixed .img-areas img {
+    width: 50%;
+  }
+
+  .container .leftfixed .social-icon {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container .leftfixed .buttons {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  
+  .right .Services .service .ser{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  
+
+  .right .Services .service .ser p{
+    line-height: 35px;
+    margin-top: -10px;
+  }
+
+ 
+ 
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width:767px){
+
+  header nav ul {
+    display: none;
+    background-color: #198754;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    left: -377px;
+    text-align: center;
+    margin-right: 50px;
+    padding: 30vh 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+ 
+
+
+    
+  }
+
+  header nav ul li {
+    margin-left: 0;
+  }
+
+  header nav .nav-icon {
+    display: block;
+    font-size: 30px;
+} 
+
+  .container .right .About .personal-details .details {
+    width: 100%;
+  
+  }
+
+  
+  .container .right .Skills .personal-skills .skill {
+    width: 100%;
+    margin-top: 0;
+  
+  }
+
+  .container .right .Skills .personal-skills .s1{
+    margin-top: 2.5rem;
+  }
+
+
+  .right .Portfolio .projects .web {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+
+  
+  }
+
+
+  .right .Portfolio .projects .web img {
+    width: 100%;
+    /* height: 35vh; */
+    padding-bottom: 1rem;
+}
+
+.right .Portfolio .projects .web figcaption{   
+  margin-bottom: 15px;
+  padding-left: 10px;
+
+}
+
+.right .Contact form .name_email {
+  width: 100%;
+  margin: 0;
+}
+
+.right .Contact form .name_email .name, .right .Contact form .name_email .email {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+.right .Contact form .massage {
+  width: 100%;
+  margin: 0;
+}
+
+.right .Contact form .massage textarea {
+ margin-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+@media only screen and (max-width:572px){
+
+  .container .leftfixed .buttons .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.right .Services .service .ser {
+  width: 100%; 
+}
+
+
+  
+}
+
+
+/*---------------------- Media quaries ends here ---------------*/
